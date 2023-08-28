@@ -70,9 +70,9 @@ void flowmeter_calculations()
   int no_of_pulses = pulseNew - pulseOld;
   float interval = 1.0/flow_calc_freq;
 
-  float inst_volume = (no_of_pulses * interval)/ppl; //in litres
+  float inst_volume = ((float)no_of_pulses * interval)/ppl; //in litres
 
-  flowrate = inst_volume * 60; //in litres per min
+  flowrate = inst_volume * 60.0; //in litres per min
 
   flow_inst_volume = inst_volume/1000.0; //inst volume in cubic m 
   total_volume += flow_inst_volume; //total volume in cubic m
