@@ -4,9 +4,9 @@ unsigned long pulsecount = 0;
 int pulseNew = 0;
 int pulseOld = 0;
 
-double flow_inst_volume = 0.0; //in cubic m
+float flow_inst_volume = 0.0; //in cubic m
 float flowrate = 0.0; //in litres per min
-double total_volume = 0.0; //in cubic m
+float total_volume = 0.0; //in cubic m
 float ppl = 41.2; // pulses per litre
 
 float flow_calc_freq = 1.0; //Freq of calculating Flowrate and Volume in a second
