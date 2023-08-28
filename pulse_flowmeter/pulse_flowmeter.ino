@@ -74,8 +74,18 @@ void flowmeter_calculations()
 
   flowrate = inst_volume * 60.0; //in litres per min
 
-  flow_inst_volume = inst_volume/1000.0; //inst volume in cubic m 
-  total_volume += flow_inst_volume; //total volume in cubic m
+  flow_inst_volume = (inst_volume * 0.001); //inst volume in cubic m 
+  total_volume = total_volume + flow_inst_volume; //total volume in cubic m
+
+  Serial.print("Current Pulsecount = ");
+  Serial.println(pulseNew);
+  Serial.print("No of pulses = ");
+  Serial.println(no_of_pulses);
+  Serial.print("Interval in seconds = ");
+  Serial.println(interval);
+  Serial.print("Inst volume in litres = ");
+  Serial.println(inst_volume);
+  
 
   Serial.print("Instant Volume = ");
   Serial.print(flow_inst_volume);
